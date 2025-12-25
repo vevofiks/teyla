@@ -3,8 +3,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, Play, Pause, Volume2, VolumeX } from "lucide-react";
-import {SECTIONS} from "../data/index"
-import {montserrat} from "../font";
+import {SECTIONS} from "../../data/index"
+import {montserrat} from "../../font";
 
 export default function TourismHero() {
   const [currentIndex, setCurrentIndex] = useState(0);
