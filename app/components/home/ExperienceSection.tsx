@@ -90,14 +90,21 @@ export default function StickyExperienceSection() {
     { scope: container, dependencies: [data] }
   );
 
-  if (data.length === 0) return <div className="h-screen bg-gray-50 flex items-center justify-center">Loading Experiences...</div>;
+  if (data.length === 0) return <div className="h-screen bg-[#081c15] text-white flex items-center justify-center">Loading Experiences...</div>;
 
   return (
     <ReactLenis root>
-      <section className="" ref={container}>
-        <div className="py-20 px-8 text-center">
-            <h2 className={` ${montserrat.className} text-4xl md:text-5xl font-bold font-mono mb-4`}>Authentic Kerala Experiences</h2>
-            <p className="text-gray-100 x-w-xl mx-auto uppercase tracking-widest text-xs">Scroll to explore Gods Own Country</p>
+      <section id="experiences" className="bg-[#081c15]" ref={container}>
+        <div className="py-20 px-4 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 mb-4 block drop-shadow-md">
+              Curated Escapes
+            </span>
+            <h2 className={`${montserrat.className} text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-lg`}>
+              Authentic Kerala Experiences
+            </h2>
+            <p className="mt-4 mx-auto max-w-2xl text-sm leading-relaxed text-zinc-300 md:text-base">
+              Scroll to explore God's Own Country
+            </p>
         </div>
 
         <div className="sticky-wrapper relative flex h-screen w-full items-center justify-center overflow-hidden px-4">
@@ -139,7 +146,7 @@ export default function StickyExperienceSection() {
                         </div>
                     </div>
 
-                    <Link 
+                    <Link
                         href={`/experience/${item.slug}`}
                         className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold text-sm hover:bg-emerald-500 hover:text-white transition-all group"
                     >

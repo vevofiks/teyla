@@ -40,7 +40,7 @@ export default function TourismHero() {
   const toggleMute = () => setIsMuted(!isMuted);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-black font-sans">
+    <section id="home" className="relative h-screen w-full overflow-hidden bg-black font-sans">
       {/* Background Video Layer */}
       <AnimatePresence mode="wait">
         <motion.div
